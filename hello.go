@@ -275,18 +275,3 @@ func insertionSortTransaksiDesc() {
 	}
 	fmt.Println("Transaksi berhasil diurutkan")
 }
-
-func binarySearchTransaksi(biaya int) int {
-	low, high := 0, totalTransaksi-1
-	for low <= high {
-		mid := (low + high) / 2
-		if transaksiArray[mid].biaya == biaya {
-			return mid
-		} else if transaksiArray[mid].biaya < biaya {
-			low = mid + 1
-		} else {
-			high = mid - 1
-		}
-	}
-	return -1
-}
